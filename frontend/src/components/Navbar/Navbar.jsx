@@ -83,12 +83,12 @@ const Navbar = () => {
             whileTap="tap"
           >
             <motion.span
-              className="h-2 w-2 mr-[-4px] rounded-full bg-[#7a53ef] shadow-[0_0_8px_#9777FA]"
+              className="h-2 w-2 mr-[-4px] rounded-full bg-[#7d5be6] shadow-[0_0_8px_#9777FA]"
               variants={dotVariants}
               animate="animate"
             />
             <motion.button 
-              className="text-[#9777FA] font-bold tracking-wide text-lg sm:text-xl md:text-md px-3 py-1 sm:px-4 sm:py-2 rounded-md transition-colors hover:text-[#7d5be6]"
+              className="text-[#7d5be6] font-bold tracking-wide text-lg sm:text-xl md:text-md px-3 py-1 sm:px-4 sm:py-2 rounded-md transition-colors hover:text-[#9777fa]"
               variants={buttonVariants}
             >
               Apply Now
@@ -96,7 +96,7 @@ const Navbar = () => {
           </motion.div>
           
           <motion.button 
-            className="border bg-[#6D4BD3] text-white hover:bg-[#4D1AE6] px-3 py-1 sm:px-4 sm:py-2 rounded-md text-sm sm:text-base md:text-base transition-colors whitespace-nowrap"
+            className="border bg-[#7d5be6] text-white hover:bg-[#9777fa] px-3 py-1 sm:px-4 sm:py-2 rounded-md text-sm sm:text-base md:text-base transition-colors whitespace-nowrap"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"

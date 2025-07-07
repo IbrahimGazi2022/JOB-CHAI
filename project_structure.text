@@ -1,0 +1,31 @@
+- .DS_Store
+- frontend
+  - .DS_Store
+  - .gitignore
+  - README.md
+  - eslint.config.js
+  - index.html
+  - package-lock.json
+  - package.json
+  - public
+    - .DS_Store
+    - img
+      - girl-hero.png
+      - icon-job.svg
+      - icon-location-2.svg
+      - logo.png
+      - tip-1-1.png
+      - tip-2.png
+  - src
+    - App.css
+    - App.jsx
+    - components
+      - Hero
+        - Hero.jsx
+      - Navbar
+        - Navbar.jsx
+      - index.js
+    - index.css
+    - main.jsx
+  - vite.config.js
+- project_structure.text
