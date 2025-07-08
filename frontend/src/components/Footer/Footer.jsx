@@ -70,7 +70,7 @@ const Footer = () => {
             id="footer"
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
+            viewport={{ once: true, amount: 0.25 }}
             className="w-full bg-gradient-to-r from-gray-900 to-[#081838] text-white"
         >
             <motion.div
@@ -93,7 +93,7 @@ const Footer = () => {
                             />
                         </motion.div>
                         <motion.p variants={textVariant(0.4)} className="text-gray-300 text-sm leading-relaxed">
-                            Bringing you the latest insights on technology, travel, and lifestyle. Join our community of passionate readers.
+                            Job Chai is the heart of the design community and the best resource to discover and connect with designers and jobs worldwide.
                         </motion.p>
                         <motion.div variants={textVariant(0.6)} className="flex space-x-4 pt-2">
                             {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
@@ -193,7 +193,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 className="hover:text-white transition-colors duration-300"
                             >
-                                © {new Date().getFullYear()} All rights reserved | Ibrahim - The Coder
+                                © {new Date().getFullYear()} Job Chai | All rights reserved - Ibrahim - The Coder
                             </a>
                         </motion.p>
                         <motion.div variants={staggerContainer(0.1, 0.3)} className="flex space-x-4">

@@ -128,8 +128,9 @@ const Categories = () => {
         <motion.div
           className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 sm:mb-12"
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
           variants={container}
+          viewport={{ once: false, amount: 0.25 }}
         >
           <motion.h2
             className="text-3xl sm:text-4xl md:text-5xl lg:text-[55px] font-bold leading-tight"
@@ -164,8 +165,9 @@ const Categories = () => {
         <motion.div
           className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 text-center"
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
           variants={container}
+          viewport={{ once: false, amount: 0.25 }}  
         >
           {categories.map((category) => (
             <motion.div
