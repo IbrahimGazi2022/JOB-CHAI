@@ -10,16 +10,27 @@
   - public
     - .DS_Store
     - img
+      - business-development.svg
+      - congratulation.svg
+      - content-writer.svg
       - girl-hero.png
       - icon-job.svg
       - icon-location-2.svg
       - logo.png
+      - marketing copy.svg
+      - marketing-director.svg
+      - marketing.svg
+      - proof-reading.svg
+      - system-analyst.svg
+      - testing.svg
       - tip-1-1.png
       - tip-2.png
   - src
     - App.css
     - App.jsx
     - components
+      - Categories
+        - Categories.jsx
       - Hero
         - Hero.jsx
       - Navbar
