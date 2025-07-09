@@ -212,7 +212,6 @@ const Navbar = () => {
             <motion.button
               className="text-[#7d5be6] font-bold tracking-wide text-lg sm:text-xl md:text-md px-3 py-1 sm:px-4 sm:py-2 rounded-md transition-colors"
               variants={buttonVariants}
-              whileHover="hover"
               whileTap="tap"
             >
               Apply Now

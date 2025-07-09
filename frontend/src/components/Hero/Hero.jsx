@@ -144,7 +144,7 @@ const Hero = () => {
               className="text-2xl sm:text-3xl md:text-4xl lg:text-[55px] xl:text-[70px] font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight uppercase"
               variants={item}
             >
-              The Easiest Way to Get Your New Job
+              The Easiest Way to Get Your <span className="text-[#7d5be6]">New Job</span>
             </motion.h1>
 
             <motion.p

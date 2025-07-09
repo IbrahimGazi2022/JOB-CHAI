@@ -130,7 +130,7 @@ const Categories = () => {
           initial="hidden"
           whileInView="visible"
           variants={container}
-          viewport={{ once: false, amount: 0.25 }}
+          viewport={{ once: true, amount: 0.25 }}
         >
           <motion.h2
             className="text-3xl sm:text-4xl md:text-5xl lg:text-[55px] font-bold leading-tight"
@@ -167,7 +167,7 @@ const Categories = () => {
           initial="hidden"
           whileInView="visible"
           variants={container}
-          viewport={{ once: false, amount: 0.25 }}  
+          viewport={{ once: true, amount: 0.25 }}  
         >
           {categories.map((category) => (
             <motion.div
