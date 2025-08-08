@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import logo from "/img/logo.png";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
@@ -213,19 +215,30 @@ const Navbar = () => {
               className="text-[#7d5be6] font-bold tracking-wide text-lg sm:text-xl md:text-md px-3 py-1 sm:px-4 sm:py-2 rounded-md transition-colors"
               variants={buttonVariants}
               whileTap="tap"
+              onClick={() => navigate("/login")}
+
             >
               Apply Now
             </motion.button>
           </motion.div>
 
-          <motion.button
-            className="border bg-[#7d5be6] text-white px-3 py-1 sm:px-4 sm:py-2 rounded-md text-sm sm:text-base md:text-base whitespace-nowrap"
-            variants={buttonVariants}
-            whileHover="hover"
-            whileTap="tap"
-          >
-            Sign In
-          </motion.button>
+          <SignedOut>
+            <motion.button
+              className="border bg-[#7d5be6] text-white px-3 py-1 sm:px-4 sm:py-2 rounded-md text-sm sm:text-base md:text-base whitespace-nowrap"
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
+              onClick={() => navigate("/login")}
+            >
+              Sign In
+            </motion.button>
+          </SignedOut>
+
+          {/* user avatar */}
+          <SignedIn>
+            <UserButton afterSignOutRedirectUrl="/" appearance={{ elements: { avatarBox: "h-32 w-32" } }} />
+          </SignedIn>
+
         </motion.div>
       </motion.nav>
 
@@ -261,16 +274,24 @@ const Navbar = () => {
                   className="flex-1 text-[#7d5be6] font-bold py-2 rounded-md border border-[#7d5be6]"
                   whileHover={{ backgroundColor: "#f5f0ff" }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => navigate("/login")}
                 >
                   Apply Now
                 </motion.button>
-                <motion.button
-                  className="flex-1 bg-[#7d5be6] text-white py-2 rounded-md"
-                  whileHover={{ backgroundColor: "#9777fa" }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Sign In
-                </motion.button>
+                <SignedOut>
+                  <motion.button
+                    className="flex-1 bg-[#7d5be6] text-white py-2 rounded-md"
+                    whileHover={{ backgroundColor: "#9777fa" }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => navigate("/login")}
+                  >
+                    Sign In
+                  </motion.button>
+                </SignedOut>
+
+                <SignedIn>
+                  <UserButton afterSignOutRedirectUrl="/" appearance={{ elements: { avatarBox: "h-32 w-32" } }} />
+                </SignedIn>
               </div>
             </div>
           </motion.div>
